@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Please take this survey.</p>
+        <form id="survey-form">
+          <!-- Basic Info -->
+          <fieldset>
+            <legend>Basic Info</legend>
+            <label id="name-label"
+              >Name:
+              <input id="name" type="text" required placeholder="Ash Smith" />
+            </label>
+            <label id="email-label"
+              >Email:
+              <input
+                id="email"
+                type="email"
+                required
+                placeholder="ash@smith.org"
+              />
+            </label>
+            <label id="number-label"
+              >Age:
+              <input
+                id="number"
+                type="number"
+                min="1"
+                max="1000"
+                placeholder="21"
+              />
+            </label>
+            <div class="dropdown-group">
+              <label for="dropdown">What's your favorite food?</label>
+              <select id="dropdown">
+                <option>Pizza</option>
+                <option>Ice cream</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <!-- Location -->
+          <fieldset>
+            <legend>Where do you live?</legend>
+            <div class="radio-container">
+              <div class="radio-group">
+                <input
+                  id="north"
+                  type="radio"
+                  name="choice"
+                  class="choice"
+                  value="north"
+                />
+                <label for="north" class="choice">The North</label>
+              </div>
+              <!-- <br /> -->
+              <div class="radio-group">
+                <input
+                  id="south"
+                  type="radio"
+                  name="choice"
+                  class="choice"
+                  value="south"
+                />
+                <label for="south" class="choice">The South</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Wants -->
+          <fieldset class="checkboxes">
+            <legend>I want to (select all that apply):</legend>
+            <div class="check-group">
+              <input id="run" type="checkbox" value="Run" />
+              <label for="run">Run</label>
+            </div>
+            <div class="check-group">
+              <input id="jump" type="checkbox" value="Jump" />
+              <label for="jump">Jump</label>
+            </div>
+            <div class="check-group">
+              <input id="swim" type="checkbox" value="Swim" />
+              <label for="swim">Swim</label>
+            </div>
+            <div class="check-group">
+              <input id="play" type="checkbox" value="Play" />
+              <label id="play">Play</label>
+            </div>
+          </fieldset>
+
+          <!-- Comments -->
+          <fieldset>
+            <legend>Additional Comments</legend>
+            <textarea></textarea>
+          </fieldset>
+          <button type="submit" id="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+    <footer>Copyright 2024 Justin Klitgaard</footer>
+  </body>
+</html>
